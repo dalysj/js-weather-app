@@ -2,6 +2,20 @@
  * This script controls functionality for the weather application
  * @author ste_daly13
  */
+
+// global array for image sources and images
+const imageSources = ['Clear.jpg', 'Clouds.jpg', 'Compass.jpg', 'Drizzle.jpg', 'Fog.jpg', 'Mist.jpg', 'Rain.jpg', 'Snow.jpg', 'Thunderstorm.jpg', 'Tornado.jpg', 'Unavailable.jpg'];
+const images = [];
+
+// preload images in browser
+for(let el of imageSources)
+{
+    const image = new Image();
+    image.src = 'images/background-images/' + el;
+    images.push(image);
+}
+console.log(images);
+
 window.addEventListener('load', () => 
 {
     
